@@ -1,0 +1,37 @@
+<div class="w-full flex flex-col gap-3">
+    <h1 class="flex items-baseline gap-1 text-4xl font-black text-cyan-600">
+        Compétences
+        <span class="block w-3 h-3 bg-orange-400"></span>
+    </h1>
+    <p>
+        Découvrez les compétences que j'ai acquises et perfectionnées au fil de mes projets, 
+        combinant expertise technique et créativité pour relever tous les défis.
+    </p>
+</div>
+<div class="w-full grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6 bg-gray-100 p-6 rounded">
+    <img class="w-full h-16" src="{{ url_for('static', filename='images/icons/python.svg') }}" alt="Logo Python">
+    <img class="w-full h-16" src="{{ url_for('static', filename='images/icons/django.svg') }}" alt="Logo Django">
+    <img class="w-full h-16" src="{{ url_for('static', filename='images/icons/flask.svg') }}" alt="Logo Flask">
+    <img class="w-full h-16" src="{{ url_for('static', filename='images/icons/C.svg') }}" alt="Logo C">
+    <img class="w-full h-16" src="{{ url_for('static', filename='images/icons/sql.svg') }}" alt="Logo SQL">
+    <img class="w-full h-16" src="{{ url_for('static', filename='images/icons/javascript.svg') }}" alt="Logo JS">
+    <img class="w-full h-16" src="{{ url_for('static', filename='images/icons/vue.svg') }}" alt="Logo VueJS">
+    <img class="w-full h-16" src="{{ url_for('static', filename='images/icons/alpine.svg') }}" alt="Logo AlpineJS">
+    <img class="w-full h-16" src="{{ url_for('static', filename='images/icons/html.svg') }}" alt="Logo HTML">
+    <img class="w-full h-16" src="{{ url_for('static', filename='images/icons/css.svg') }}" alt="Logo CSS">
+    <img class="w-full h-16" src="{{ url_for('static', filename='images/icons/tailwindcss.svg') }}" alt="Logo Tailwindcss">
+    <img class="w-full h-16" src="{{ url_for('static', filename='images/icons/bootstrap.svg') }}" alt="Logo Bootstrap">
+    <img class="w-full h-16" src="{{ url_for('static', filename='images/icons/linux.svg') }}" alt="Logo Linux">
+    <img class="w-full h-16" src="{{ url_for('static', filename='images/icons/docker.svg') }}" alt="Logo Docker">
+    <img class="w-full h-16" src="{{ url_for('static', filename='images/icons/git.svg') }}" alt="Logo Git">
+    <img class="w-full h-16" src="{{ url_for('static', filename='images/icons/latex.svg') }}" alt="Logo Latex">
+</div>
+<div class="self-start">
+    <a href="{{ url_for('static', filename='cv.pdf') }}" download class="w-56 md:w-full lg:w-full flex items-center justify-between gap-1 bg-cyan-600 text-white font-medium py-2 px-3 rounded shadow-sm cursor-pointer hover:filter hover:brightness-110">
+        <span>Télécharger mon CV</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8L22 12L18 16"/>
+            <path d="M2 12H22"/>
+        </svg>
+    </a>
+</div>

@@ -1,0 +1,30 @@
+{% extends "partials/base.html" %}
+
+{% block contents %}
+    <template x-route="/">
+        <template x-if="$router.path === '/'">
+            <div class="w-full flex flex-col gap-10">
+                <section x-html="index" class="w-full flex flex-col gap-10"></section>
+                <section class="w-full flex flex-col gap-8">
+                    {% include "partials/skills.html" %}
+                </section>
+            </div>
+        </template>
+    </template>
+
+    <template x-route="/projets/:slug/">
+        <template x-if="$router.path === '/projets/' + $router.params.slug + '/'">
+            <section x-html="getDetail" x-data="project" x-init="getProject($router.params.slug)" class="w-full flex flex-col gap-10"></section>
+        </template>
+    </template>
+
+    <template x-route="/contact/">
+        <template x-if="$router.path === '/contact/'">
+            <section x-html="contact" x-data="contact" class="w-full flex flex-col gap-10"></section>
+        </template>
+    </template>
+
+    <template x-if="!['/', '/contact/'].includes($router.path) && (!$router.path.startsWith('/') || ($router.path.startsWith('/') && !projects?.some(project => project.slug === $router.params.slug)))">
+        <section x-html="notfound" class="w-full flex flex-col gap-10"></section>
+    </template>
+{% endblock contents %}

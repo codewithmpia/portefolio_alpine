@@ -1,0 +1,79 @@
+<div class="w-full flex flex-col md:flex-row lg:flex-col gap-6">
+    <div class="flex flex-col gap-6">
+        <div class="h-64 w-full md:w-64 lg:w-full bg-cyan-600 rounded-md shadow-md">
+            <img class="h-full w-full object-cover rounded-md" src="{{ url_for('static', filename='images/photo.png') }}" alt="Ma photo">
+        </div>
+        <div class="hidden md:block lg:hidden">
+            <template x-if="$router.path !== '/contact/'">
+                <a href="/contact/" x-link class="w-56 md:w-full lg:w-full flex items-center justify-between gap-1 bg-cyan-600 text-white font-medium py-2 px-3 rounded shadow-sm cursor-pointer hover:filter hover:brightness-110">
+                    <span>Me contacter</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 8L22 12L18 16"/>
+                        <path d="M2 12H22"/>
+                    </svg>
+                </a>
+            </template>
+            <template x-if="$router.path === '/contact/'">
+                <a href="{{ url_for('static', filename='cv.pdf') }}" target="_blank" class="w-56 md:w-full lg:w-full flex items-center justify-between gap-1 bg-cyan-600 text-white font-medium py-2 px-3 rounded shadow-sm cursor-pointer hover:filter hover:brightness-110">
+                    <span>Télécharger mon CV</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 8L22 12L18 16"/>
+                        <path d="M2 12H22"/>
+                    </svg>
+                </a>
+            </template>
+        </div>
+    </div>
+    <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-2">
+            <span class="text-sm">Hi, je suis</span>
+            <h2 class="text-3xl font-bold text-cyan-600">Mpia M.</h2>
+            <p>Passionné par la programmation informatique, je suis actuellement étudiant en licence dans ce domaine.</p>
+        </div>
+        <div class="flex flex-col gap-4">
+            <h3 class="text-xl text-cyan-600 font-bold">Me retrouver</h3>
+            <div class="flex flex-col gap-2">
+                <h4 class="text-lg font-bold">Par mail: </h4>
+                <a href="mailto:codewithmpia@gmail.com">codewithmpia@gmail.com</a>
+            </div>
+            <div class="flex flex-col gap-2">
+                <h4 class="text-lg font-bold">Mes réseaux sociaux </h4>
+                <div class="flex items-center gap-6">
+                    <a href="https://github.com/codewithmpia" target="_blank">
+                        <img class="w-8 h-8" src="{{ url_for('static', filename='images/icons/github.svg') }}" alt="Github">
+                    </a>
+                    <a href="" target="_blank">
+                        <img class="w-8 h-8" src="{{ url_for('static', filename='images/icons/twitter.svg') }}" alt="Twitter">
+                    </a>
+                    <a href="" target="_blank">
+                        <img class="w-8 h-8" src="{{ url_for('static', filename='images/icons/youtube.svg') }}" alt="Youtube">
+                    </a>
+                    <a href="" target="_blank">
+                        <img class="w-8 h-8" src="{{ url_for('static', filename='images/icons/discord.svg') }}" alt="Discord">
+                    </a>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <div class="block md:hidden lg:block">
+        <template x-if="$router.path !== '/contact/'">
+            <a href="/contact/" x-link class="w-56 md:w-full lg:w-full flex items-center justify-between gap-1 bg-cyan-600 text-white font-medium py-2 px-3 rounded shadow-sm cursor-pointer hover:filter hover:brightness-110">
+                <span>Me contacter</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 8L22 12L18 16"/>
+                    <path d="M2 12H22"/>
+                </svg>
+            </a>
+        </template>
+        <template x-if="$router.path === '/contact/'">
+            <a href="{{ url_for('static', filename='cv.pdf') }}" download class="w-56 md:w-full lg:w-full flex items-center justify-between gap-1 bg-cyan-600 text-white font-medium py-2 px-3 rounded shadow-sm cursor-pointer hover:filter hover:brightness-110">
+                <span>Télécharger mon CV</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 8L22 12L18 16"/>
+                    <path d="M2 12H22"/>
+                </svg>
+            </a>
+        </template>
+    </div>
+</div>

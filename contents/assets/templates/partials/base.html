@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil | codewithmpia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index-LuI9dhGP.css') }}">
+    <link rel="stylesheet" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <script defer>const projects = {{ projects|tojson }}</script>
+    <script defer src="{{ url_for('static', filename='js/index-9LcL_0eb.js') }}"></script>
+</head>
+<body x-data="router" class="bg-white font-jetbrains text-base">
+    <div class="max-w-screen-xl p-3 md:p-6 mx-auto">
+        <div class="w-full grid grid-cols-1 lg:grid-cols-12 lg:gap-14 gap-10">
+            <aside class="lg:col-span-3">
+                {% include "partials/aside.html" %}
+            </aside>
+            <main class="lg:col-span-9">
+                <div class="w-full flex flex-col gap-10">
+                    {% block contents %}
+                    {% endblock contents %}
+                    <footer class="w-full border-t border-solid border-[#d5e3ec] py-6">
+                        {% include "partials/footer.html" %}
+                    </footer>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

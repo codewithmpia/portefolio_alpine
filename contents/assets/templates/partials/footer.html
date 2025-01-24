@@ -1,0 +1,14 @@
+<div class="flex flex-col items-center gap-4">
+    <ul class="flex items-center gap-6">
+        <li>
+            <a href="/" x-link class="uppercase font-medium hover:text-cyan-600" x-bind:class="{'text-cyan-600': $router.path === '/' || $router.path === '/projets/' + $router.params.slug + '/'}">Projets</a>
+        </li>
+        <li>
+            <a href="/contact/" x-link class="uppercase font-medium hover:text-cyan-600" x-bind:class="{'text-cyan-600': $router.path === '/contact/'}">Contact</a>
+        </li>
+        <li>
+            <a href="https://github.com/codewithmpia" target="_blank" class="uppercase font-medium hover:text-cyan-600">Github</a>
+        </li>
+    </ul>
+    <p class="text-sm text-center">Copyright &copy; 2025 <a href="{{ url_for('index') }}">codewithmpia</a>. Tous droits reservés.</p>
+</div>
